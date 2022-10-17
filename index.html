@@ -9,7 +9,7 @@
 
     <!-- ****************Unicons**************** -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    
+
     <!-- ***************Swiper CSS**************** -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     
@@ -88,7 +88,7 @@
                                 <path d="M368.5,315Q327,390,243.5,384.5Q160,379,100.5,309.5Q41,240,96,162.5Q151,85,244,78.5Q337,72,373.5,156Q410,240,368.5,315Z" />
                             </g>
                             <image class="home__blob-img" x="90" y="30" width="100%" height="100%" clip-path="url(#blob)"
-                                xlink:href="assets/images/blobimage2.png"
+                                xlink:href="assets/Images/blobimage.png"
                                 preserveAspectRatio="xMidYMid slice"></image>
                         </svg>
                     </div>
@@ -111,7 +111,7 @@
             <span class="section__subtitle">My introduction</span>
 
             <div class="about__container container grid">
-                <img src="assets/images/Aboutimg.jpeg" alt="" class="about__img">
+                <img src="assets/Images/Aboutimg.jpeg" alt="" class="about__img">
 
                 <div class="about__data">
                     <p class="about__description">Iam a self taught frontend developer. I primarily focus on writing clean, elegant and efficient code.</p>
@@ -319,7 +319,7 @@
                 <div class="swiper-wrapper">
                     <!-- ****************Portfolio 1****************** -->
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/images/Portfolio1.PNG" alt="" class="portfolio__img">
+                        <img src="assets/Images/Portfolio1.PNG" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Form Validation</h3>
@@ -335,7 +335,7 @@
 
                     <!-- ****************Portfolio 2****************** -->
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/images/Portfolio2.PNG" alt="" class="portfolio__img">
+                        <img src="assets/Images/Portfolio2.PNG" alt="" class="portfolio__img">
                     
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Weather App</h3>
@@ -351,7 +351,7 @@
 
                     <!-- ****************Portfolio 3****************** -->
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/images/Portfolio3.PNG" alt="" class="portfolio__img">
+                        <img src="assets/Images/Portfolio3.PNG" alt="" class="portfolio__img">
                     
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Todo List</h3>
@@ -419,7 +419,7 @@
                         
                         <div>
                             <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle">raquib@gmail.com</span>
+                            <span class="contact__subtitle">mraquib46@gmail.com</span>
                         </div>
                     </div>
 
@@ -436,27 +436,27 @@
                 <form action="" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
+                            <label for="name" class="contact__label">Name</label>
+                            <input type="text" class="contact__input" id="name" required>
                         </div>
 
                         <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input">
+                            <label for="email" class="contact__label">Email</label>
+                            <input type="email" class="contact__input" id="email" required>
                         </div>
                     </div>
                     <div class="contact__content">
-                        <label for="" class="contact__label">Project</label>
-                        <input type="text" class="contact__input">
+                        <label for="project" class="contact__label">Project</label>
+                        <input type="text" class="contact__input" id="project">
                     </div>
 
                     <div class="contact__content">
-                        <label for="" class="contact__label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <label for="message" class="contact__label">Message</label>
+                        <textarea name="message" id="message" rows="7" class="contact__input" style="resize:none" required></textarea>
                     </div>
 
                     <div>
-                        <a href="#" class="button button--flex">
+                        <a href="#" class="button button--flex" onclick="sendMail()">
                             Send Message
                             <i class="uil uil-message button__icon"></i>
                         </a>
@@ -507,11 +507,21 @@
     <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
-    
+
     <!-- ********************Swiper JS****************** -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    
+
     <script src="script.js"></script>
 
+    ****************Email JS**************
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("67f9C4SKlKL5wllu1");
+    })();
+    </script>
 </body>
 </html>
+

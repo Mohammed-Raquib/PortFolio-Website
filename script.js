@@ -133,4 +133,26 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+function sendMail(){
+    var params = {
+    name:  document.getElementById("name").value,   
+    email:  document.getElementById("email").value,
+    project:  document.getElementById("project").value,
+    message:  document.getElementById("message").value
+};
 
+const serviceId = "service_0k4adxl";
+const templateId = "template_6jjnvye";
+
+    emailjs.send(serviceId, templateId, params)
+    .then(
+         res => {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("project").value = "";
+        document.getElementById("message").value = "";
+        alert("Message sent successfully");
+        }
+    )
+    .catch((error) => console.log(error));
+}
